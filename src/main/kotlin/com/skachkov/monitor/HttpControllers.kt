@@ -35,6 +35,8 @@ class UserController(private val repository: UserRepository) {
 class NodesController(private val dataService: ConnectionDataService) {
 	@GetMapping("/edges/")
 	fun findEdges() = dataService.findEdges()
+	@GetMapping("/edges/update/")
+	fun findUpdates() = dataService.findUpdates()
 	@GetMapping("/nodes/")
 	fun findNodes() = dataService.findNodes()
 }

@@ -11,6 +11,9 @@ import org.springframework.util.StringUtils
 
 @Service
 class ConnectionDataService {
+    companion object {
+        var MAX_LEN = 1 + 1
+    }
     @Autowired
     lateinit var connectionRepository: ConnectionRepository;
 
@@ -20,6 +23,15 @@ class ConnectionDataService {
     fun findEdges(): Any {
         val requestResponse = connectionRepository.findAll()
         val edges = requestResponse.map { request ->  Edge(request.source, request.destination, "getById", false, "to", Color("green"))}
+        return edges
+    }
+
+    fun findUpdates(): Any {
+        val green = Color("green")
+        val red = Color("red")
+        val color = if ( MAX_LEN++ % 2 == 0)  green else red;
+        val requestResponse = connectionRepository.findById(1)
+        val edges = requestResponse.map { request ->  Edge(request.source, request.destination, "getById", false, "to", color)}
         return edges
     }
 
