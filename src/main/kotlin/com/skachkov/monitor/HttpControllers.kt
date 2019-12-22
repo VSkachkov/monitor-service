@@ -35,6 +35,8 @@ class UserController(private val repository: UserRepository) {
 class NodesController(private val dataService: ConnectionDataService) {
 	@GetMapping("/edges/")
 	fun findEdges() = dataService.findEdges()
+	@GetMapping("/edges/trace/{traceId}")
+	fun findEdgesByTraceId(@PathVariable traceId: Long) = dataService.findEdgesByTraceId(traceId)
 	@GetMapping("/edges/update/")
 	fun findUpdates() = dataService.findUpdates()
 	@GetMapping("/nodes/")
