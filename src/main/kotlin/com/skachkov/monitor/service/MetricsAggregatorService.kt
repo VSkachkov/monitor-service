@@ -27,7 +27,7 @@ class MetricsAggregatorService {
             val request = RequestResponse(Date(), 200, Random(LongRange(Long.MIN_VALUE, Long.MAX_VALUE).hashCode()).nextLong(), nodes.get(source), nodes.get(dest), null)
             connectionRepository.save(request)
         }
-        connectionRepository.save(RequestResponse(Date(), 200, Random(LongRange(Long.MIN_VALUE, Long.MAX_VALUE).hashCode()).nextLong(), nodes.get(1), "EXTERNAL", null)
+        connectionRepository.save(RequestResponse(Date(), 504, Random(LongRange(Long.MIN_VALUE, Long.MAX_VALUE).hashCode()).nextLong(), nodes.get(1), "EXTERNAL", null)
         )
     }
 
