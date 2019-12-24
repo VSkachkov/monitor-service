@@ -2,6 +2,7 @@ package com.skachkov.monitor.service
 
 import com.skachkov.monitor.*
 import com.skachkov.monitor.converter.ConnectionDataConverter
+import com.skachkov.monitor.notifier.Notifier
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.util.StringUtils
@@ -17,6 +18,8 @@ class ConnectionDataService {
 
     val LOAD_FACTOR = 80
 
+    @Autowired
+    lateinit var notifier: Notifier
 
     @Autowired
     lateinit var connectionRepository: ConnectionRepository;
@@ -73,6 +76,7 @@ class ConnectionDataService {
                 .filter { destination -> !StringUtils.isEmpty(destination) }
         val nodes = immutableSources.union(destination).stream().map { service -> getNode(service)
         }
+        notifier.sendEmail()
         return nodes
     }
 
