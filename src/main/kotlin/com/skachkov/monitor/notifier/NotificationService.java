@@ -6,17 +6,17 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Notifier {
+public class NotificationService {
     @Autowired
     private JavaMailSender javaMailSender;
 
-    public void sendEmail() {
+    public void sendEmail(final String message) {
 
         SimpleMailMessage msg = new SimpleMailMessage();
         msg.setTo("belrafter@yandex.ru");
 
-        msg.setSubject("Testing from Spring Boot");
-        msg.setText("Hello World \n Spring Boot Email");
+        msg.setSubject("Notification message about microservices issues");
+        msg.setText(message);
 
         javaMailSender.send(msg);
     }

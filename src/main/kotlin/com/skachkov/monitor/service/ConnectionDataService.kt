@@ -2,7 +2,7 @@ package com.skachkov.monitor.service
 
 import com.skachkov.monitor.*
 import com.skachkov.monitor.converter.ConnectionDataConverter
-import com.skachkov.monitor.notifier.Notifier
+import com.skachkov.monitor.notifier.NotificationService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.util.StringUtils
@@ -19,7 +19,7 @@ class ConnectionDataService {
     val LOAD_FACTOR = 80
 
     @Autowired
-    lateinit var notifier: Notifier
+    lateinit var notificationService: NotificationService
 
     @Autowired
     lateinit var connectionRepository: ConnectionRepository;
@@ -76,7 +76,7 @@ class ConnectionDataService {
                 .filter { destination -> !StringUtils.isEmpty(destination) }
         val nodes = immutableSources.union(destination).stream().map { service -> getNode(service)
         }
-        notifier.sendEmail()
+//        notifier.sendEmail("DS-BOOKING almost ran out of heap memory. \n Current memory size 970 MB. Max memory size 1024 MB. CPU load 74%. \nRequests/sec: 112")
         return nodes
     }
 
