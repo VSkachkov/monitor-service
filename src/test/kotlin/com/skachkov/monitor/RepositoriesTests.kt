@@ -1,5 +1,7 @@
 package com.skachkov.monitor
 
+import com.skachkov.monitor.entities.Article
+import com.skachkov.monitor.entities.User
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

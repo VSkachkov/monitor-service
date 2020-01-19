@@ -2,7 +2,9 @@ package com.skachkov.monitor.service
 
 import com.skachkov.monitor.*
 import com.skachkov.monitor.converter.ConnectionDataConverter
-import com.skachkov.monitor.notifier.NotificationService
+import com.skachkov.monitor.entities.RequestResponse
+import com.skachkov.monitor.enums.Color
+import com.skachkov.monitor.enums.STATUS
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.util.StringUtils

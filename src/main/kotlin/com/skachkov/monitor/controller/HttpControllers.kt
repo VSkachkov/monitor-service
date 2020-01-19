@@ -1,5 +1,7 @@
-package com.skachkov.monitor
+package com.skachkov.monitor.controller
 
+import com.skachkov.monitor.ArticleRepository
+import com.skachkov.monitor.UserRepository
 import com.skachkov.monitor.service.ConnectionDataService
 import org.springframework.http.HttpStatus.*
 import org.springframework.web.bind.annotation.*

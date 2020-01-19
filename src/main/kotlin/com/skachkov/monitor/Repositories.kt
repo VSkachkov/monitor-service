@@ -1,5 +1,8 @@
 package com.skachkov.monitor
 
+import com.skachkov.monitor.entities.Article
+import com.skachkov.monitor.entities.RequestResponse
+import com.skachkov.monitor.entities.User
 import org.springframework.data.repository.CrudRepository
 
 interface ArticleRepository : CrudRepository<Article, Long> {

@@ -1,4 +1,4 @@
-package com.skachkov.monitor.service
+package com.skachkov.monitor.enums
 
 enum class STATUS {
     OK,

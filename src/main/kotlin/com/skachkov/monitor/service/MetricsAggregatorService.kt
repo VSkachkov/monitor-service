@@ -1,13 +1,12 @@
 package com.skachkov.monitor.service
 
 import com.skachkov.monitor.ConnectionRepository
-import com.skachkov.monitor.RequestResponse
+import com.skachkov.monitor.entities.RequestResponse
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import java.util.*
 import javax.annotation.PostConstruct
 import kotlin.random.Random
-import kotlin.random.nextInt
 
 
 @Service

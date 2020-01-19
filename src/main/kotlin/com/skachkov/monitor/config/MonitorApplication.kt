@@ -1,4 +1,4 @@
-package com.skachkov.monitor
+package com.skachkov.monitor.config
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

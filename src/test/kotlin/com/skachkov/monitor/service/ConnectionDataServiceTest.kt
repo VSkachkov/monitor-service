@@ -1,9 +1,8 @@
 package com.skachkov.monitor.service
 
+import com.skachkov.monitor.enums.STATUS
 import org.junit.Assert
 import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.*
 
 internal class ConnectionDataServiceTest {
 

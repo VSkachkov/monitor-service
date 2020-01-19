@@ -1,6 +1,9 @@
 package com.skachkov.monitor
 
 import com.ninjasquad.springmockk.MockkBean
+import com.skachkov.monitor.config.MonitorProperties
+import com.skachkov.monitor.entities.Article
+import com.skachkov.monitor.entities.User
 import io.mockk.every
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

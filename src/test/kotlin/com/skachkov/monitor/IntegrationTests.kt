@@ -1,5 +1,6 @@
 package com.skachkov.monitor
 
+import com.skachkov.monitor.config.toSlug
 import org.assertj.core.api.Assertions.*
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll

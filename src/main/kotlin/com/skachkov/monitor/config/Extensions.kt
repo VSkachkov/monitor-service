@@ -1,4 +1,4 @@
-package com.skachkov.monitor
+package com.skachkov.monitor.config
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatterBuilder

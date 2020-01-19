@@ -1,5 +1,6 @@
-package com.skachkov.monitor
+package com.skachkov.monitor.entities
 
+import com.skachkov.monitor.config.toSlug
 import java.time.LocalDateTime
 import java.util.*
 import javax.persistence.*
